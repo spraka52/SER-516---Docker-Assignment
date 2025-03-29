@@ -1,0 +1,4 @@
+FROM openjdk:21-slim
+COPY Assign3_plus.java .
+RUN javac Assign3_plus.java
+ENTRYPOINT ["java", "Assign3_plus"]

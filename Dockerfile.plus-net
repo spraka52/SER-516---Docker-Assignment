@@ -1,0 +1,11 @@
+FROM openjdk:21-slim
+
+WORKDIR /app
+
+COPY Assign3_plus_net.java .
+
+RUN javac Assign3_plus_net.java
+
+ENV PORT=8080
+
+CMD ["java", "Assign3_plus_net"]

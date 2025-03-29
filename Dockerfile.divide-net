@@ -1,0 +1,11 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY Assign3_divide_net.py .
+
+RUN pip install flask
+
+ENV PORT=8080
+
+CMD ["python3", "Assign3_divide_net.py"]

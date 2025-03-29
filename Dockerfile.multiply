@@ -1,0 +1,4 @@
+FROM openjdk:21-slim
+COPY Assign3_multiply.java .
+RUN javac Assign3_multiply.java
+ENTRYPOINT ["java", "Assign3_multiply"]

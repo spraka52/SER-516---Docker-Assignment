@@ -1,0 +1,3 @@
+FROM python:3.11-slim
+COPY Assign3_minus.py .
+ENTRYPOINT ["python3", "Assign3_minus.py"]
