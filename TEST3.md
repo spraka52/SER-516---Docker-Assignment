@@ -94,7 +94,7 @@ curl "http://localhost:8013/calculate_divide?a=20&b=5"
 
 ---
 
-## ❌ Error Case Testing
+## Error Case Testing
 
 All error responses return:
 - HTTP status code: `400`
