@@ -1,0 +1,6 @@
+FROM openjdk:17-slim
+WORKDIR /app
+COPY Assign3CalcNet.java .
+RUN javac Assign3CalcNet.java
+ENV PORT=8080
+CMD ["java", "Assign3CalcNet"]

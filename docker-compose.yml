@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  assign3-plus-net:
+    build:
+      context: .
+      dockerfile: Dockerfile.plus-net
+    networks:
+      - assign3-net
+
+  assign3-minus-net:
+    build:
+      context: .
+      dockerfile: Dockerfile.minus-net
+    networks:
+      - assign3-net
+
+  assign3-multiply-net:
+    build:
+      context: .
+      dockerfile: Dockerfile.multiply-net
+    networks:
+      - assign3-net
+
+  assign3-divide-net:
+    build:
+      context: .
+      dockerfile: Dockerfile.divide-net
+    networks:
+      - assign3-net
+
+  calc:
+    build:
+      context: .
+      dockerfile: Dockerfile.calc-net
+    ports:
+      - "8000:8080"
+    networks:
+      - assign3-net
+    depends_on:
+      - assign3-plus-net
+      - assign3-minus-net
+      - assign3-multiply-net
+      - assign3-divide-net
+
+networks:
+  assign3-net:
