@@ -65,8 +65,6 @@ http://localhost:8000/calculate?expr=3+5*7/4-7
 3. Send the request.
 4. You should see a `200 OK` response with body:
 ```
-4
-```
 5. Try invalid input to see `400 Bad Request` and output `1`
 
 ---
